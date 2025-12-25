@@ -5,7 +5,14 @@ import (
 )
 
 func getExpenseReport(e expense) (string, float64) {
-	// ?
+	switch v := e.(type) {
+	case email:
+		return v.toAddress, estimateYearlyCost(e, 1000)
+	case sms:
+		return v.toPhoneNumber, estimateYearlyCost(e, 500)
+	default:
+		return "invalid expense", 0.0
+	}
 }
 
 // don't touch below this line
