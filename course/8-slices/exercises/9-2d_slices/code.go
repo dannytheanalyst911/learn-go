@@ -1,9 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func createMatrix(rows, cols int) [][]int {
-	// ?
+	result := [][]int{}
+	for i := 0; i < rows; i++ {
+		row := []int{} //make row first because the result is now empty
+		for j := 0; j < cols; j++ {
+			row = append(row, i*j)
+
+		}
+		result = append(result, row)
+	}
+	return result
 }
 
 // dont edit below this line
