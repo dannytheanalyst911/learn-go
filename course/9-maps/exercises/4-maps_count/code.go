@@ -9,9 +9,9 @@ import (
 func getCounts(userIDs []string) map[string]int {
 	getCount := make(map[string]int)
 	for _, id := range userIDs {
-		if _, ok := getCount[id]; !ok {
-			getCount[id] = 0
-		}
+		//	if _, ok := getCount[id]; !ok {
+		//		getCount[id] = 0
+		//	}
 		getCount[id]++
 	}
 	return getCount
