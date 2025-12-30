@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-func getFormattedMessages(messages []string, formatter func) []string {
+// higher order func giong nhu interfaces cua function v, cai formatter la de nhet cai addSignature hoac addGreeting vao
+func getFormattedMessages(messages []string, formatter func(string) string) []string {
 	formattedMessages := []string{}
 	for _, message := range messages {
 		formattedMessages = append(formattedMessages, formatter(message))
