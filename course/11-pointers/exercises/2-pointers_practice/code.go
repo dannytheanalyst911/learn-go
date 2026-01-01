@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func removeProfanity(message *string) {
-	// ?
-}
+	
 
 // don't touch below this line
 
